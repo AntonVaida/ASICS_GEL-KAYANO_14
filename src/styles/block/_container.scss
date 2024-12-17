@@ -1,0 +1,15 @@
+@use "../utils/mixins" as mixins;
+@use "../utils//vars" as vars;
+
+.container {
+  max-width: vars.$container_max_width;
+  padding: 0 vars.$container_padding_horisontal;
+  margin: 0 auto;
+  background-color: white;
+
+  @include mixins.desktop {
+    padding: vars.$container_padding_vertical 0px;
+    margin: 0 auto;
+    max-width: vars.$desktop_media_query_width;
+  }
+}

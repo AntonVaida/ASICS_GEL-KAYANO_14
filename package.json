@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "live-server src",
+    "build:css": "sass src/scss/main.scss src/css/main.css --style compressed",
+    "build": "npm run build:css",
+    "deploy": "npm run build && gh-pages -d src"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "gh-pages": "^6.2.0",
+    "gulp": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^6.0.0",
+    "gulp-uglify": "^3.0.2",
+    "live-server": "^1.2.2",
+    "sass": "^1.83.0"
+  }
+}

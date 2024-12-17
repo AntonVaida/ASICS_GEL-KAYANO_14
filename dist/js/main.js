@@ -1,0 +1,1 @@
+let form=document.querySelector(".form"),inputs=document.querySelectorAll(".form__input");function handler(e){e.preventDefault(),inputs.forEach(e=>{e.value=""})}form.addEventListener("submit",handler),window.addEventListener("hashchange",()=>{"#menu"===window.location.hash?document.body.classList.add("page--with-menu"):document.body.classList.remove("page--with-menu")});

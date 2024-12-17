@@ -1,0 +1,42 @@
+@use "../utils/vars" as vars;
+@use "../utils/mixins" as mixins;
+@use "../utils/extends";
+
+.description_section_container {
+  margin-top: 24px;
+  padding: 24px;
+  background-color: vars.$neutral_100_transparent_50;
+  border-radius: 12px;
+  @include mixins.desktop {
+    margin-top: 48px;
+  }
+}
+
+.description_nav_container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid vars.$neutral_100;
+  li {
+    @extend %bodyLargeFontStyle;
+    &:not(:first-child) {
+      transition: vars.$transition_time;
+      &:hover {
+        @extend %bodyLargeBoldAccentFontStyle;
+        font-weight: 400;
+      }
+    }
+    &:first-child {
+      @extend %bodyLargeBoldAccentFontStyle;
+    }
+  }
+}
+
+.description_text_container {
+  padding-top: 24px;
+  p {
+    @extend %bodyLargeFontStyle;
+  }
+}

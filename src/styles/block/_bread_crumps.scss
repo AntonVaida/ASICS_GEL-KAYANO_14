@@ -1,0 +1,29 @@
+@use "../utils/extends";
+@use "../utils/vars" as vars;
+
+.bread_crumps_container {
+  @extend %secondaryFontStyle;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 44px;
+  padding: 12px 0;
+  li {
+    display: block;
+    &:not(:last-child) {
+      position: relative;
+      a {
+          text-decoration: underline;
+          text-decoration-color: vars.$primary_300;
+        }
+      &::after {
+          content: '/';
+          padding: 0px 4px;
+          text-decoration: none;
+        };
+    }
+    &:last-child {
+      @extend %secondaryAccentBoltFontStyle;
+    }
+  }
+}
