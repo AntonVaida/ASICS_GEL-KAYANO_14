@@ -1,0 +1,88 @@
+@use "./vars" as vars;
+
+%secondaryFontStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: vars.$primary_300;
+}
+
+%modalTitleStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  color: vars.$primary_800;
+}
+
+%modalSubTitleStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: vars.$primary_800;
+}
+
+%secondaryAccentFontStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: vars.$secondary_600;
+}
+%secondaryAccentBoltFontStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: vars.$secondary_600;
+}
+
+%headlineLargeFontStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: vars.$primary_800;
+}
+
+%headlineSmallFontStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: vars.$primary_800;
+}
+
+%bodyLargeFontStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: vars.$primary_800;
+}
+
+%bodyMediumFontStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: vars.$primary_500;
+}
+
+%bodyLargeBoldFontStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: vars.$primary_800;
+}
+
+%bodyLargeBoldAccentFontStyle {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: vars.$secondary_600;
+}

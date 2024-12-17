@@ -1,0 +1,7 @@
+@use "./reset";
+@use "./typography";
+@use "./block/main";
+
+body.modal-open {
+  overflow: hidden;
+}

@@ -1,0 +1,91 @@
+@use "../utils/mixins" as mixins;
+@use "../utils/vars" as vars;
+
+.modal_container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  padding: 24px;
+  background-color: white;
+}
+
+.modal_header {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  z-index: 1100;
+}
+
+.close_button {
+  @include mixins.square(44px);
+  display: flex;
+  border-width: 0;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+}
+
+.photos_section_modal {
+  height: calc(100vh - 44px - 24px - 24px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    width: 100%
+  }
+  @include mixins.desktop {
+  img {
+      width: 50%
+    }
+  };
+  
+}
+
+.preview_photos_container_modal {
+  height: 100px;
+  display: flex;
+  justify-content: start;
+  gap: 12px;
+  align-items: center;
+  width: 80%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+        li {
+          @include mixins.square(65px);
+          min-width: 65px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: vars.$neutral_100_transparent_50;
+          border-radius: 12px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: vars.$neutral_100;
+          @include mixins.desktop {
+            @include mixins.square(100px);
+          };
+          &:first-child {
+            background-color: vars.$neutral_200;
+            border-width: 1px;
+            border-style: solid;
+            border-color: vars.$secondary_600;
+          }
+        }
+}
+
+.main_photos_container_modal {
+  width: 80%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

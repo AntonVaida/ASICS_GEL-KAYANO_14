@@ -1,0 +1,6 @@
+@use "./utils/extends";
+
+.html {
+  @extend %bodyLargeFontStyle;
+  scroll-behavior: smooth;
+}

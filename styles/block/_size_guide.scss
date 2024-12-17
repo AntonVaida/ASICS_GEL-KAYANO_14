@@ -1,0 +1,82 @@
+@use "../utils/extends";
+@use "../utils//vars" as vars;
+@use "../utils/mixins" as mixins;
+
+.modal_size_guide_container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000CC;
+}
+
+.modal_size_guide {
+  max-width: 90%;
+  max-height: 80%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  @include mixins.desktop {
+    padding: 24px;
+    width: 800px;
+  };
+}
+
+.size_guide_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    @extend %modalTitleStyle;
+  }
+}
+
+.size_guide_sub_title_container {
+  margin-top: 24px;
+  h3 {
+    @extend %modalSubTitleStyle;
+  }
+}
+
+.size_guide_img_container {
+  display: none;
+  &--mobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    @include mixins.desktop {
+      display: none;
+    }
+  };
+  @include mixins.desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  };
+}
+
+.size_guide_content {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.size_guide_description_container {
+  @extend %bodyMediumFontStyle;
+  color: vars.$primary_800;
+  ol {
+    margin-top: 12px;
+    list-style-position: outside;
+    list-style-type: decimal;
+    padding-left: 20px;
+  }
+}
