@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "live-server src",
-    "build:css": "sass src/scss/main.scss src/css/main.css --style compressed",
+    "build:css": "sass src/styles/main.scss src/css/main.css --style compressed",
     "build": "npm run build:css",
     "deploy": "npm run build && gh-pages -d src"
   },

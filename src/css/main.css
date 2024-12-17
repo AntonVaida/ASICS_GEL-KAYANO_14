@@ -709,6 +709,13 @@ table {
   border-width: 1px;
   border-style: solid;
   border-color: #F4F8FB;
+  transition: border-color 0.3s;
+}
+.preview_photos_container_modal li:hover {
+  background-color: #F0F6FA;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #34739D;
 }
 @media (min-width: 1260px) {
   .preview_photos_container_modal li {

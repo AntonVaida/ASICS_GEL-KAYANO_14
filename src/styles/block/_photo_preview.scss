@@ -70,6 +70,13 @@
           border-width: 1px;
           border-style: solid;
           border-color: vars.$neutral_100;
+          transition: #{border-color} vars.$transition_time;
+          &:hover {
+            background-color: vars.$neutral_200;
+            border-width: 1px;
+            border-style: solid;
+            border-color: vars.$secondary_600;
+          }
           @include mixins.desktop {
             @include mixins.square(100px);
           };
